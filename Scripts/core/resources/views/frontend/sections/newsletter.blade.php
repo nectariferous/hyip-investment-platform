@@ -1,0 +1,29 @@
+@php
+$content = content('newsletter.content');
+@endphp
+
+<section class="subscribe-section">
+    <div class="subscribe-el">
+        <img src="{{ getFile('elements', 'paper-plane.png') }}" alt="image">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+                <div class="site-header">
+                    <h2 class="site-title">{{ __(@$content->data->title) }}</h2>
+                    <p>{{ __(@$content->data->short_description) }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <form class="subscribe-form" id="subscribe" method="POST">
+                    @csrf
+                    <input type="text" name="email" class="form-control subscribe-email"
+                        placeholder="{{ __('Enter email here') }}">
+                    <button>{{ __('Subscribe') }} <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

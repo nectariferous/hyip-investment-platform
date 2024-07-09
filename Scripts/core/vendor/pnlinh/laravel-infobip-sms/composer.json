@@ -1,0 +1,53 @@
+{
+  "name": "pnlinh/laravel-infobip-sms",
+  "description": "Infobip Sms Service in Laravel",
+  "keywords": [
+    "infobip sms",
+    "laravel infobip"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pham Ngoc Linh",
+      "email": "pnlinh1207@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.1|^7.3|^8.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^3.8",
+    "mockery/mockery": "^1.2",
+    "phpunit/phpunit": "^8.4@dev|^9.3.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pnlinh\\InfobipSms\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Pnlinh\\InfobipSms\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Pnlinh\\InfobipSms\\Providers\\InfobipSmsServiceProvider"
+      ],
+      "aliases": {
+        "InfobipSms": "Pnlinh\\InfobipSms\\Facades\\InfobipSms"
+      }
+    }
+  },
+  "scripts": {
+    "test": [
+      "vendor/bin/phpunit"
+    ]
+  }
+}

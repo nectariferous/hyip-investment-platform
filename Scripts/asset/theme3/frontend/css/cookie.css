@@ -1,0 +1,64 @@
+/* Write Your CSS Here */
+
+.cookie-modal {
+    background-color: #CD9F34  !important;
+    position: fixed;
+    z-index: 99999999;
+    top: 100;
+    bottom: 10px;
+    width: 40%;
+    padding: 26px;
+    color: #fff;
+    left: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+    .cookie-modal {
+        width: 80%;
+        left: 20px;
+    }
+}
+
+.cookie-consent__message {
+    display: block;
+    text-align: justify;
+}
+
+.cookie-modal button {
+    display: block;
+    background: #fff;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.cookies-card__icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #DED4CD;
+    font-size: 32px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.image-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line {
+    line-height: 1rem;
+}

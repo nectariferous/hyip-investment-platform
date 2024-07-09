@@ -1,0 +1,68 @@
+{
+    "name": "nexmo/laravel",
+    "description": "Laravel Package for Nexmo's PHP Client",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "James Seconde",
+            "role": "PHP Developer Advocate",
+            "email": "jim.seconde@vonage.com"
+        },
+        {
+            "name": "Tim Lytle",
+            "role": "Developer",
+            "homepage": "http://twitter.com/tjlytle"
+        },
+        {
+            "name": "Michael Heap",
+            "role": "Developer",
+            "homepage": "http://twitter.com/mheap"
+        },
+        {
+            "name": "Chris Tankersley",
+            "role": "Developer",
+            "homepage": "http://twitter.com/dragonmantank"
+        }
+    ],
+    "support": {
+        "email": "devrel@nexmo.com"
+    },
+    "require": {
+        "php": "^7.4|^8.0|^8.1",
+        "illuminate/support": "^5.2|^6.0|^7.0|^8.0",
+        "vonage/client": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.3|~6.0|~8.0|~9.0",
+        "orchestra/testbench": "~3.0|^4.0|^5.0|^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nexmo\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nexmo\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Nexmo\\Laravel\\NexmoServiceProvider"
+            ],
+            "aliases": {
+                "Nexmo": "Nexmo\\Laravel\\Facade\\Nexmo"
+            }
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
+    }
+}
